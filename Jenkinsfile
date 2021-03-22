@@ -12,13 +12,11 @@ pipeline {
                 echo 'Code Push'
             }
         }
-    }
 
 stage('NPM INSTALL') {
 steps {
  sh 'npm install' 
-} 
- }
+}
   }
 
 stage('docker build') {
