@@ -16,7 +16,7 @@ steps {
 
 stage('docker build') {
 steps {
-sh 'docker build -t myappv1/latest:${BUILD_NUMBER}'
+sh 'docker build -t myappv1/latest:${BUILD_NUMBER} .'
 }
 }
 }
