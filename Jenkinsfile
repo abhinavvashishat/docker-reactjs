@@ -21,9 +21,7 @@ sh 'docker build -t myappv1/latest:${BUILD_NUMBER} .'
 }
         stage('kubernetes container creation') {
             steps {
-            KubernetesDeploy(
                 kubeconfigID: 'KUBERNETES_CLUSTER_CONFIG',
-               )
                 sh 'kubectl run --image=myappv1/latest:${BUILD_NUMBER} --image-pull-policy=Never'
             }
         }
