@@ -28,4 +28,4 @@ sh 'docker build -t myappv1/latest:${BUILD_NUMBER}'
 }
 }
 }
-}
+
