@@ -5,7 +5,7 @@ agent any
 
 stages
 {
-steps("build")
+stage("build")
 {
 when{
 expression{
@@ -16,11 +16,11 @@ BRANCH_NAME =='master' && CODE_CHANGES == true
 
 }
 
-steps("NPM INSTALL")
+stage("NPM INSTALL")
 {
 sh "npm install"
 }
-steps("docker build")
+stage("docker build")
 {
 sh "docker build -t myapp/latest:${BUILD_NUMBER}"
 }
