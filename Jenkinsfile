@@ -22,7 +22,7 @@ sh "npm install"
 }
 stage("docker build")
 {
-sh "docker build -t myapp/latest"
+sh "docker build -t myapp/latest:${BUILD_NUMBER}"
 }
 }
 }
