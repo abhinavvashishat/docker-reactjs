@@ -3,8 +3,6 @@ pipeline
 {
 agent any
 
-stages
-{
 stage("build")
 {
 when{
@@ -23,6 +21,5 @@ sh "npm install"
 stage("docker build")
 {
 sh "docker build -t myapp/latest:${BUILD_NUMBER}"
-}
 }
 }
