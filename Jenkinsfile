@@ -19,6 +19,11 @@ steps {
 sh 'docker build -t myappv1/latest:${BUILD_NUMBER} .'
 }
 }
+        stage('kubernetes container creation') {
+            steps {
+                sh 'kubectl run myappv1/latest:${BUILD_NUMBER} --image-pull-policy=Never'
+            }
+        }
 }
 }
 
