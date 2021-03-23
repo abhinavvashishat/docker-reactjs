@@ -13,7 +13,6 @@ CODE_CHANGES = getGitChanges(
             addCiMessage: true,
             addVoteOnMergeRequest: true,
             acceptMergeRequestOnSuccess: false,
-            branchFilterType: "NameBasedFilter",
             includeBranchesSpec: "release/qat",
             excludeBranchesSpec: "",) 
 pipeline {
