@@ -21,7 +21,7 @@ sh 'docker build -t abhinavdevops01/myappv1:${BUILD_NUMBER} .'
 }
         stage('kubernetes container creation') {
             steps {
-                sh 'kubectl run myapp-${BUILD_NUMBER} --image=docker.io/abhinavdevops01/myappv1:32 --image-pull-policy=Never'
+                sh 'kubectl run myapp-${BUILD_NUMBER} --image=docker.io/abhinavdevops01/myappv1:32'
             }
         }
 }
