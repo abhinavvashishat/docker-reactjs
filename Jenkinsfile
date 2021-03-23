@@ -1,10 +1,9 @@
 pipeline {
     agent any
-   
-    stages {
-       triggers {
+    triggers {
         pollSCM('') //Empty quotes tells it to build on a push
        }
+    stages {
         stage('build') {
             steps {
                 echo 'Code Push'
