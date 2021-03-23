@@ -1,4 +1,21 @@
-CODE_CHANGES = getGitChanges() 
+CODE_CHANGES = getGitChanges(
+            branchFilterType: 'All',
+            triggerOnPush: true,
+            triggerOnMergeRequest: false,
+            triggerOpenMergeRequestOnPush: "never",
+            triggerOnNoteRequest: true,
+            noteRegex: "Jenkins please retry a build",
+            skipWorkInProgressMergeRequest: true,
+            secretToken: project_token,
+            ciSkip: false,
+            setBuildDescription: true,
+            addNoteOnMergeRequest: true,
+            addCiMessage: true,
+            addVoteOnMergeRequest: true,
+            acceptMergeRequestOnSuccess: false,
+            branchFilterType: "NameBasedFilter",
+            includeBranchesSpec: "release/qat",
+            excludeBranchesSpec: "",) 
 pipeline {
     agent any
     stages {
