@@ -19,9 +19,14 @@ steps {
 sh 'docker build -t abhinavdevops01/myappv1:${BUILD_NUMBER} .'
 }
 }
+stage('docker push') {
+steps {
+sh 'docker push abhinavdevops01/myappv1:${BUILD_NUMBER}'
+}
+}
         stage('kubernetes container creation') {
             steps {
-                sh 'kubectl run myapp-${BUILD_NUMBER} --image=abhinavdevops01/myappv1:32'
+                sh 'helm upgrade myapp ./myapp --set image.tag=${BUILD_NUMBER}'
             }
         }
 }
