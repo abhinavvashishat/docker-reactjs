@@ -3,7 +3,7 @@ pipeline {
     stages {
 stage('Trigger on SCM') {
 when {
-triggeredBy 'SCMTrigger'
+triggeredBy "SCMTrigger"
 }}
         stage('build') {
             steps {
