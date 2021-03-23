@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-    gitlab(
+    githubPush(
       triggerOnPush: true,
       triggerOnMergeRequest: false, triggerOpenMergeRequestOnPush: "never",
       triggerOnNoteRequest: true,
