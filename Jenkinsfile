@@ -16,7 +16,6 @@ pipeline {
             addCiMessage: true,
             addVoteOnMergeRequest: true,
             acceptMergeRequestOnSuccess: false,
-            branchFilterType: "NameBasedFilter",
             includeBranchesSpec: "release/qat",
             excludeBranchesSpec: "",
       secretToken: "324a6df2d59cba3e444b5ddfd9829a562e9a8461")
