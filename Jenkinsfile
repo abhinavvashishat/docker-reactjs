@@ -16,7 +16,7 @@ steps {
 
 stage('docker build') {
 steps {
-sh 'docker build -t myappv1:${BUILD_NUMBER} .'
+sh 'docker build -t abhinavdevops01/myappv1:${BUILD_NUMBER} .'
 }
 }
         stage('kubernetes container creation') {
