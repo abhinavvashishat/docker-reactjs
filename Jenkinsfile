@@ -4,8 +4,7 @@ pipeline {
     stages {
        triggers {
         pollSCM('') //Empty quotes tells it to build on a push
-    }
-}
+       }
         stage('build') {
             steps {
                 echo 'Code Push'
