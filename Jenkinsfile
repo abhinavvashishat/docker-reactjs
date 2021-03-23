@@ -6,7 +6,7 @@ CODE_CHANGES = getGitChanges(
             triggerOnNoteRequest: true,
             noteRegex: "Jenkins please retry a build",
             skipWorkInProgressMergeRequest: true,
-            secretToken: project_token,
+            secretToken: 324a6df2d59cba3e444b5ddfd9829a562e9a8461,
             ciSkip: false,
             setBuildDescription: true,
             addNoteOnMergeRequest: true,
