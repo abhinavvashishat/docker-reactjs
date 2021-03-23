@@ -2,6 +2,9 @@ pipeline {
     agent any
    
     stages {
+        stage('Build and Test') {
+        properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('H/15 * * * *')])])
+        }
         stage('build') {
             steps {
                 echo 'Code Push'
