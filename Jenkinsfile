@@ -1,6 +1,7 @@
 pipeline {
     agent any
     triggers {
+      git url: 'https://github.com/abhinavvashishat/docker-reactjs.git'
         pollSCM('') //Empty quotes tells it to build on a push
        }
     stages {
