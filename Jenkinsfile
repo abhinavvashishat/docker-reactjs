@@ -16,12 +16,12 @@ steps {
 
 stage('docker build') {
 steps {
-sh 'docker build -t myappv1/latest:${BUILD_NUMBER} .'
+sh 'docker build -t myappv1:${BUILD_NUMBER} .'
 }
 }
         stage('kubernetes container creation') {
             steps {
-                sh 'kubectl run myapp --image=myappv1/latest:${BUILD_NUMBER} --image-pull-policy=Never'
+                sh 'kubectl run myapp --image=myappv1:${BUILD_NUMBER} --image-pull-policy=Never'
             }
         }
 }
