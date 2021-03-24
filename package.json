@@ -19,11 +19,11 @@
     "eject": "react-scripts eject",
     "sonar": "node sonar-project.js"
   }
-}
+
 
 "jestSonar": {
   "reportPath": "reports",
   "reportFile": "test-report.xml",
   "indent": 4
 }
-
+}
