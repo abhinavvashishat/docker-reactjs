@@ -13,7 +13,7 @@ CODE_CHANGES = githubPush(
             addCiMessage: true,
             addVoteOnMergeRequest: true,
             acceptMergeRequestOnSuccess: false,
-            includeBranchesSpec: "release/qat",
+            includeBranchesSpec: "origin/master",
             excludeBranchesSpec: "",) 
 pipeline {
     agent any
