@@ -22,7 +22,7 @@ pipeline {
         stage('build') {
             steps {
                 
-                    onEvent {
+                    trigger {
                     BRANCH_NAME == 'master' && CODE_CHANGES == true
                 
                 }
