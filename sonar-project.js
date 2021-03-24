@@ -11,7 +11,8 @@ sonarqubeScanner({
 	    'sonar.language':'js',
             'sonar.sourceEncoding':'UTF-8',
             'sonar.sources': '.',
-	  //'sonar.tests': 'specs',
-          //'sonar.inclusions' : 'src/**'
+            'sonar.test.inclusions': './__tests__/**/*.test.ts',
+            'sonar.typescript.lcov.reportPaths': 'coverage/lcov.info',
+            'sonar.testExecutionReportPaths': 'reports/test-report.xml'
        },
 }, () => {});
