@@ -35,7 +35,7 @@ steps {
   }
 stage('Sonar') {
 steps {
- sh 'npm run sonar' 
+ sh 'npm test' 
 }
   }
 stage('docker build') {
