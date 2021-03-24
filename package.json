@@ -18,12 +18,5 @@
     "test": "cross-env CI=true react-scripts test --silent --env=jsdom --coverage --testResultsProcessor jest-sonar-reporter",
     "eject": "react-scripts eject",
     "sonar": "node sonar-project.js"
-  },
-
-
-"jestSonar": {
-  "reportPath": "reports",
-  "reportFile": "test-report.xml",
-  "indent": 4
 }
 }
