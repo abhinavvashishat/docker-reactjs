@@ -21,9 +21,8 @@ pipeline {
 
         stage('build') {
             steps {
-                    githubPush {
+                    expression {
                     BRANCH_NAME == 'master' && CODE_CHANGES == true
-                
                 }
                 echo 'Code Push' // push
             }
