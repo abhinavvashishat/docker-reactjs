@@ -10,7 +10,7 @@ pipeline {
 
 stage('Build') {
 steps {
- sh 'npm install' //installing NPM
+ sh 'npm install' 
 }
   }
 stage('Execute SonarQube Report') {
@@ -28,7 +28,7 @@ steps {
 sh 'docker push abhinavdevops01/myappv1:${BUILD_NUMBER}'
 }
 }
-        stage('K8's Clusterization') {
+        stage('Kubernetes Clusterization') {
             steps {
                 sh 'helm upgrade myapp ./myapp --set image.tag=${BUILD_NUMBER}'
             }
