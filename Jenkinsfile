@@ -30,7 +30,7 @@ pipeline {
 
 stage('NPM INSTALL') {
 steps {
- sh 'ls' 
+ sh 'npm install' 
 }
   }
 stage('Sonar') {
