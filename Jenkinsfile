@@ -26,7 +26,7 @@ pipeline {
                     BRANCH_NAME == 'master' && CODE_CHANGES == true
                 
                 }
-                echo 'Code Push' // push code
+                echo 'Code Push' // push
             }
         }
 
