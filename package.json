@@ -8,12 +8,15 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
-    "react-sparklines": "^1.7.0"
+    "react-sparklines": "^1.7.0",
+     "sonarqube-scanner": "^2.7.0"
+    
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sonar": "node sonar-project.js"
   }
 }
