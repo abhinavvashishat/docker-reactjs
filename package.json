@@ -9,7 +9,7 @@
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
     "react-sparklines": "^1.7.0",
-     "sonarqube-scanner": "^2.7.0"
+     //"sonarqube-scanner": "^2.7.0"
     
   },
   "scripts": {
@@ -17,6 +17,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "sonar": "sonar-project.properties"
+    //"sonar": "sonar-project.properties"
   }
 }
