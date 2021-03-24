@@ -21,8 +21,7 @@ pipeline {
 
         stage('build') {
             steps {
-                
-                    trigger {
+                    githubPush {
                     BRANCH_NAME == 'master' && CODE_CHANGES == true
                 
                 }
