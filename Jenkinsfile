@@ -8,27 +8,27 @@ pipeline {
             }
             }
 
-stage('NPM INSTALL') {
+stage('Build') {
 steps {
  sh 'npm install' 
 }
   }
-stage('Sonar') {
+stage('Execute SonarQube Report') {
 steps {
  sh 'npm run sonar' 
 }
   }
-stage('docker build') {
+stage('Image Building Process') {
 steps {
 sh 'docker build -t abhinavdevops01/myappv1:${BUILD_NUMBER} .'
 }
 }
-stage('docker push') {
+stage('Image Push to Hub') {
 steps {
 sh 'docker push abhinavdevops01/myappv1:${BUILD_NUMBER}'
 }
 }
-        stage('kubernetes container creation') {
+        stage('K8's Clusterization') {
             steps {
                 sh 'helm upgrade myapp ./myapp --set image.tag=${BUILD_NUMBER}'
             }
