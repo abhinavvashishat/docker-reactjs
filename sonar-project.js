@@ -1,7 +1,7 @@
 const sonarqubeScanner = require('sonarqube-scanner');
 
 sonarqubeScanner({
-  serverUrl: 'http://127.0.0.1:9000/',
+  serverUrl: 'http://sonar.organization.com/',
        options : {
 	    'sonar.projectDescription': 'This is a React application',
 	    'sonar.projectName': 'REact Application - Sample',
