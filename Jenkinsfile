@@ -1,32 +1,12 @@
-CODE_CHANGES = githubPush(
-            branchFilterType: 'All',
-            triggerOnPush: true,
-            triggerOnMergeRequest: false,
-            triggerOpenMergeRequestOnPush: "never",
-            triggerOnNoteRequest: true,
-            noteRegex: "Jenkins please retry a build",
-            skipWorkInProgressMergeRequest: true,
-            secretToken: "324a6df2d59cba3e444b5ddfd9829a562e9a8461",
-            ciSkip: false,
-            setBuildDescription: true,
-            addNoteOnMergeRequest: true,
-            addCiMessage: true,
-            addVoteOnMergeRequest: true,
-            acceptMergeRequestOnSuccess: false,
-            includeBranchesSpec: "origin/master",
-            excludeBranchesSpec: "",) 
 pipeline {
     agent any
     stages {
 
-        stage('build') {
+        stage('Checkout Source') {
             steps {
-                    expression {
-                    BRANCH_NAME == 'master' && CODE_CHANGES == true
-                }
-                echo 'Code Push' // push-code
+                    git url: 'git@github.com:abhinavvashishat/docker-reactjs.git' , branch: 'master', credentialsId: '62c535d0-77e3-4cfd-a279-73402747cda1' 
             }
-        }
+            }
 
 stage('NPM INSTALL') {
 steps {
