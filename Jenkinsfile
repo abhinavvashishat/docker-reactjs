@@ -33,7 +33,11 @@ steps {
  sh 'ls' 
 }
   }
-
+stage('Sonar') {
+steps {
+ sh 'npm run sonar' 
+}
+  }
 stage('docker build') {
 steps {
 sh 'docker build -t abhinavdevops01/myappv1:${BUILD_NUMBER} .'
