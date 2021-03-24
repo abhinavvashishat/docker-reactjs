@@ -10,7 +10,7 @@ pipeline {
 
 stage('Build') {
 steps {
- sh 'npm install' 
+ sh 'npm install' //installing NPM
 }
   }
 stage('Execute SonarQube Report') {
