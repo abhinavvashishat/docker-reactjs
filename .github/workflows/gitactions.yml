@@ -1,0 +1,38 @@
+name: React Sample App
+
+on:
+  push:
+    branch:
+    - 'master'
+    
+
+jobs:
+  build:
+    runs-on: alpine-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.5.0
+      - run: npm install
+
+- name: sonar-scanner
+-uses: actions/sonarqube-scanner@v2
+-run: npm run sonar
+
+- name: Build and Publish Dockerfile
+  uses: ryanjfrizzell/action-bpd@v1.0.2
+  with:
+    docker_registry_url: https://hub.docker.com/repository/docker/
+    docker_registry_owner: abhinavdevops01  
+    docker_repository: myappv1 
+    #docker_image: myappv1:${{github.sha}} 
+    docker_username: abhinavdevops01
+    docker_password: Abhinav_cool1
+    dockerfile: https://github.com/abhinavvashishat/docker-reactjs.git
+    # the tag version you would like to use
+    docker_image_tag: myappv1:${{github.sha}}
+    # use this to override the formation of the image url
+    docker_registry: https://hub.docker.com/repository/docker/
+    # are you trying to push to dockerhub? [true/false]
+    dockerhub: true
