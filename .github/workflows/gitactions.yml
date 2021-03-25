@@ -17,10 +17,10 @@ on:
         run: 
           npm install
            
-- name: sonar-scanner
--uses: actions/sonarqube-scanner@v2
- run: 
-    npm run sonar
+# - name: sonar-scanner
+#-uses: actions/sonarqube-scanner@v2
+ #run: 
+    #npm run sonar
     
 - name: Build and Publish Dockerfile
   uses: ryanjfrizzell/action-bpd@v1.0.2
