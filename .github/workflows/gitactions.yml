@@ -21,7 +21,7 @@ on:
        
 - name: NPM Install
       run: 
-           npm install
+      npm install
            
 - name: sonar-scanner
 -uses: actions/sonarqube-scanner@v2
