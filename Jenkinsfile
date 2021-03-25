@@ -25,7 +25,7 @@ steps {
 stage('Image Building Process') {
 steps {
  script {
-          dockerImage = docker build -t imagename .
+          dockerImage = docker.build -t imagename 
  }
  }
 }
