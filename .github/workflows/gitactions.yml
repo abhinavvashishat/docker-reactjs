@@ -9,14 +9,13 @@ on:
     runs-on: alpine-latest
     steps:
       - uses: actions/checkout@v2
-
       - uses: actions/setup-node@v1
         with:
           node-version: "14"
 
       - name: Install NPM
         run: 
-          npm npm install
+          npm install
            
 - name: sonar-scanner
 -uses: actions/sonarqube-scanner@v2
