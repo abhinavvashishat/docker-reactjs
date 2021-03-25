@@ -20,7 +20,7 @@ on:
           
        
 - name: NPM Install
-      run: 
+  run: 
       npm install
            
 - name: sonar-scanner
