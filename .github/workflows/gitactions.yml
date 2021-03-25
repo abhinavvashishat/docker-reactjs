@@ -1,12 +1,10 @@
 name: React Sample App
-
 on:
   push:
     branch:
     - 'master'
     
-
-jobs:
+    jobs:
   build:
     runs-on: alpine-latest
     steps:
