@@ -17,11 +17,6 @@ on:
       - name: Validate workflows
         run: 
           npm ci
-          
-       
-- name: NPM Install
-  run: 
-      npm install
            
 - name: sonar-scanner
 -uses: actions/sonarqube-scanner@v2
