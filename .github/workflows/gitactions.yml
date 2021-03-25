@@ -14,9 +14,9 @@ on:
         with:
           node-version: "14"
 
-      - name: Validate workflows
+      - name: Install NPM
         run: 
-          npm ci
+          npm npm install
            
 - name: sonar-scanner
 -uses: actions/sonarqube-scanner@v2
@@ -39,3 +39,6 @@ on:
     docker_registry: https://hub.docker.com/repository/docker/
     # are you trying to push to dockerhub? [true/false]
     dockerhub: true
+    run:
+    docker build -t abhinavdevops01/myappv1:${{github.sha}}
+    docker push abhinavdevops01/myappv1:${{github.sha}}
