@@ -7,7 +7,7 @@ on:
 
 jobs:
   docker:
-    runs-on: node
+    runs-on: ubuntu-latest
     steps:
       -
         name: Set up QEMU
@@ -21,4 +21,3 @@ jobs:
         with:
           username: abhinavdevops01
           password: Abhinav_cool1
-
