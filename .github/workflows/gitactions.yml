@@ -7,7 +7,7 @@ on:
 
 jobs:
   docker:
-    runs-on: node:10
+    runs-on: node
     steps:
       -
         name: Set up QEMU
@@ -21,13 +21,4 @@ jobs:
         with:
           username: abhinavdevops01
           password: Abhinav_cool1
-      -
-        name: Build and push
-        id: abhinavdevops01
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: abhinavdevops01/myappv1:${{github.sha}}
-      -
-        name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+
